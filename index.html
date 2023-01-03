@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="js/funciones.js" type="text/javascript" defer></script>
     <title></title>
 </head>
 
@@ -19,14 +21,19 @@
             <img src="imagenes/Logo.png" class="logo" alt="Logo Alura azul sin fondo">
         </div>
         <label for="" class="ingrese_texto">Ingrese el texto aqui</label>
+        <textarea id="input_encriptar" class="input_encriptar"></textarea>
         <div class="rectangulo1"></div>
+        <label for="" class="label_resultado" id="label_resultado"></label>
         <img src="imagenes/Muñeco.png"
             alt="Muñeco azul sujetando una lupa en cunclillas observando un diamante que tiene frente a el"
-            class="muñeco">
-        <div class="frame5">
+            class="muñeco" id="muñeco">
+        <div class="frame5" id="frame5">
             <label for="" class="ningun_mensaje">Ningún mensaje fue encontrado</label>
             <label for="" class="ingresa_texto">Ingresa el texto que desees encriptar o desencriptar.</label>
         </div>
+        <button class="button_copiar" id="button_copiar">
+            <label for="" class="label_copiar">Copiar</label>
+        </button>
         <div class="frame1">
             <div class="bi_exclamation">
                 <iconify-icon icon="bi:exclamation-circle-fill" class="icon"></iconify-icon>
@@ -34,11 +41,14 @@
             <label for="" class="solo_letras">Solo letras minúsculas y sin acentos</label>
         </div>
         <div class="frame3">
-            <button class="button_encriptar">
+            <button class="button_encriptar" id="button_encriptar">
                 <label for="" class="label_encriptar">Encriptar</label>
             </button>
             <button class="button_desencriptar">
                 <label for="" class="label_desencriptar">Desencriptar</label>
+            </button>
+            <button class="button_limpiar" id="button_limpiar">
+                <img src="imagenes/trash.png" alt="" class="img_limpiar">
             </button>
         </div>
     </main>
