@@ -56,7 +56,8 @@ body {
     border: 0px;
     outline: 0px;
     background-color: transparent;
-    padding: 0px;
+    padding: 25px;
+    resize: none;
 }
 
 .rectangulo1 {
@@ -156,6 +157,15 @@ body {
     background-color: transparent;
 }
 
+.button_copiar:hover{
+    background-color: #FBC252;
+}
+
+.button_copiar:active{
+    background-color: #A3BB98;
+    
+}
+
 .label_copiar {
     width: 288px;
     height: 19px;
@@ -186,6 +196,15 @@ body {
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+.button_limpiar:hover{
+    background-color: #FBC252;
+}
+
+.button_limpiar:active{
+    background-color: #A3BB98;
+    
 }
 
 .img_limpiar{
@@ -267,6 +286,14 @@ body {
     flex-grow: 0;
 }
 
+.button_encriptar:hover{
+    background-color: #FBC252;
+}
+
+.button_encriptar:active{
+    background-color: #A3BB98;
+}
+
 .label_encriptar {
     width: 280px;
     height: 19px;
@@ -296,6 +323,15 @@ body {
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+.button_desencriptar:hover{
+    background-color: #FBC252;
+}
+
+.button_desencriptar:active{
+    background-color: #A3BB98;
+    
 }
 
 .label_desencriptar {
