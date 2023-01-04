@@ -10,6 +10,19 @@ function encriptar() {
     }
 }
 
+function desencriptar() {
+    var texto_des = document.querySelector("#input_encriptar").value
+    if (texto_des == "")
+        false;
+    else {
+        texto_des = document.querySelector("#input_encriptar").value;
+        var textoCifrado = texto_des.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+        aparecerElementos();
+        resultado.textContent = textoCifrado;
+        esconderElementos();
+    }
+}
+
 function aparecerElementos() {
     document.getElementById("label_resultado").style.display = "flex";
     document.getElementById("button_copiar").style.display = "flex";
@@ -52,3 +65,5 @@ var boton_limpiar = document.querySelector("#button_limpiar");
 boton_limpiar.onclick = limpiar;
 var boton_copiar = document.querySelector("#button_copiar");
 boton_copiar.onclick = copiar;
+var boton_desencriptar = document.querySelector("#button_desencriptar");
+boton_desencriptar.onclick = desencriptar;
