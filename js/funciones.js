@@ -7,6 +7,8 @@ function encriptar() {
         aparecerElementos();
         resultado.textContent = textoCifrado;
         esconderElementos();
+        rect.classList.add('active');
+        body.classList.add('active');
     }
 }
 
@@ -19,6 +21,8 @@ function desencriptar() {
         var textoCifrado = texto_des.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
         aparecerElementos();
         resultado.textContent = textoCifrado;
+        rect.classList.add('active');
+        body.classList.add('active');
         esconderElementos();
     }
 }
@@ -31,19 +35,22 @@ function aparecerElementos() {
 function esconderElementos() {
 
     document.getElementById("frame5").style.display = "none";
-    document.getElementById("muñeco").style.display = "none";
+    muñeco.classList.add('active');
 }
 
 function limpiar() {
+    const rect = document.querySelector('.rectangulo1');
     if (texto = document.querySelector("#input_encriptar").value == "")
         false;
     else {
         document.getElementById("label_resultado").style.display = "none";
         document.getElementById("button_copiar").style.display = "none";
         document.getElementById("frame5").style.display = "flex";
-        document.getElementById("muñeco").style.display = "flex";
+        muñeco.classList.remove('active');
         document.querySelector("#input_encriptar").value = "";
         ponerCursor();
+        rect.classList.remove('active');
+        body.classList.remove('active');
     }
 }
 
@@ -57,6 +64,8 @@ function ponerCursor() {
 }
 
 var resultado = document.getElementById("label_resultado");
+const rect = document.querySelector('.rectangulo1');
+const body = document.querySelector('body');
 
 window.onload = ponerCursor;
 var boton_encriptar = document.querySelector("#button_encriptar");
@@ -67,3 +76,4 @@ var boton_copiar = document.querySelector("#button_copiar");
 boton_copiar.onclick = copiar;
 var boton_desencriptar = document.querySelector("#button_desencriptar");
 boton_desencriptar.onclick = desencriptar;
+const muñeco = document.querySelector('.muñeco');
